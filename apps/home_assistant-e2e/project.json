@@ -1,0 +1,9 @@
+{
+  "name": "home_assistant-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/home_assistant-e2e/src",
+  "tags": [],
+  "implicitDependencies": ["home_assistant"],
+  "// targets": "to see all targets run: nx show project home_assistant-e2e --web",
+  "targets": {}
+}
