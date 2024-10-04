@@ -1,0 +1,23 @@
+.toggle-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-button:hover {
+  background-color: #0056b3;
+}
+
+.toggle-button:focus {
+  outline: none;
+}
+
+.toggle-button:active {
+  transform: scale(0.98);
+}
