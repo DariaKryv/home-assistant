@@ -16,7 +16,7 @@ interface Props {
   entity: Entity;
 }
 
-export const Toggle = ({ entity }: Props) => {
+export const Meter = ({ entity }: Props) => {
   console.log(entity);
   const { t } = useTranslation();
   const [isOn, setIsOn] = useState(entity.state);
@@ -36,7 +36,7 @@ export const Toggle = ({ entity }: Props) => {
         title={entityInfo}
       >
         {/* {isOn === 'on' ? 'Off' : 'On'}
-        {entity.entity_id} */}
+          {entity.entity_id} */}
         {isOn === 'on' ? t('toggle.turnOff') : t('toggle.turnOn')} -{' '}
         {displayName}
       </button>
