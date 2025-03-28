@@ -2,7 +2,7 @@
 
 import { toggle } from './actions';
 import '../css/toggleButton.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 export interface Entity {
@@ -23,6 +23,9 @@ export const Toggle = ({ entity }: Props) => {
   const displayName = entity.attributes.friendly_name || entity.entity_id;
   const entityInfo = `${displayName} (${entity.state})`;
   //   const entityInfo = `${entity.attributes.friendly_name}(${entity.state})`;
+  useEffect(() => {
+    console.log('TEST', entity);
+  }, [entity]);
   const handleToggle = async () => {
     const x = await toggle(isOn);
     setIsOn(x.state);

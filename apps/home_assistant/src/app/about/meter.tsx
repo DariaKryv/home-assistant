@@ -19,7 +19,7 @@ interface Props {
 export const Meter = ({ entity }: Props) => {
   console.log(entity);
   const { t } = useTranslation();
-  const [isOn, setIsOn] = useState(entity.state);
+  const [isOn, setIsOn] = useState<string>(entity.state);
   const displayName = entity.attributes.friendly_name || entity.entity_id;
   const entityInfo = `${displayName} (${entity.state})`;
   //   const entityInfo = `${entity.attributes.friendly_name}(${entity.state})`;
