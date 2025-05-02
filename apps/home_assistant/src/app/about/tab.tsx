@@ -4,6 +4,7 @@ import { useState } from 'react';
 import styles from './tab.module.scss';
 import EntityList from './entityList';
 import { TemperatureChart } from './temperatureChart';
+import { EnergyChart } from './energyChart';
 
 export const Tab = () => {
   const [activeTab, setActiveTab] = useState<number>(1);
@@ -48,7 +49,7 @@ export const Tab = () => {
             </div>
           )}
           {activeTab === 2 && <EntityList />}
-          {activeTab === 3 && <div>Content 3</div>}
+          {activeTab === 3 && <EnergyChart />}
         </div>
       </div>
     </>
