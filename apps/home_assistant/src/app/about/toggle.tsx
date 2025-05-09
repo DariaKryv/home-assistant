@@ -39,7 +39,6 @@ export const Toggle = ({ entity }: Props) => {
         onClick={handleToggle}
         title={entityInfo}
       >
-        {isOn === 'on' ? t('toggle.turnOff') : t('toggle.turnOn')} -{' '}
         {displayName}
       </button>
       {/* <span className="toggle-label">

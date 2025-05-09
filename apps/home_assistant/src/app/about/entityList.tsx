@@ -22,11 +22,19 @@ export default function EntityList() {
 
   useEffect(() => {
     const intervalEntities = setInterval(getEntities, 6000);
+    return () => {
+      clearInterval(intervalEntities);
+    };
   }, []);
 
   console.log(entities);
   const toggles = entities
     .filter((entity) => entity.entity_id.startsWith('switch'))
+    .filter((entity) =>
+      ['switch.shellyplusplugs_d48afc5ada8c_switch_0'].includes(
+        entity.entity_id
+      )
+    )
     .map((entity) => {
       return <Toggle key={entity.entity_id} entity={entity} />;
     });
