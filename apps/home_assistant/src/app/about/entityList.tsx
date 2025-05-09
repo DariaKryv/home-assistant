@@ -19,8 +19,9 @@ export default function EntityList() {
     const newEntities: Entity[] = await data.json();
     setEntities(newEntities);
   }
+
   useEffect(() => {
-    getEntities();
+    const intervalEntities = setInterval(getEntities, 6000);
   }, []);
 
   console.log(entities);

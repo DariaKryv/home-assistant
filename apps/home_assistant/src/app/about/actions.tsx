@@ -11,5 +11,7 @@ export const toggle = async (state: string) => {
       body: JSON.stringify({ state: state === 'on' ? 'off' : 'on' }),
     }
   );
+
+  console.log('Toggle response:', await x.json());
   return x.json();
 };

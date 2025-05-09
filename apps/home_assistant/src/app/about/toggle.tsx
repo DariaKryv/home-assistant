@@ -27,22 +27,25 @@ export const Toggle = ({ entity }: Props) => {
     console.log('TEST', entity);
   }, [entity]);
   const handleToggle = async () => {
-    const x = await toggle(isOn);
+    // const x = await toggle(isOn);
+    console.log(' :');
     setIsOn(x.state);
     console.log(x);
   };
   return (
     <div>
       <button
-        className="toggle-button"
+        className={`toggle-button ${isOn === 'on' ? 'on' : ''}`}
         onClick={handleToggle}
         title={entityInfo}
       >
-        {/* {isOn === 'on' ? 'Off' : 'On'}
-        {entity.entity_id} */}
         {isOn === 'on' ? t('toggle.turnOff') : t('toggle.turnOn')} -{' '}
         {displayName}
       </button>
+      {/* <span className="toggle-label">
+     {isOn === 'on' ? t('toggle.turnOff') : t('toggle.turnOn')} –{' '}
+      {displayName}
+      </span> */}
     </div>
   );
 };
